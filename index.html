@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Graffims School – Nurturing Minds, Building Futures. A premier school dedicated to academic excellence and holistic development." />
+    <title>Graffims Schools| Home</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+        rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/home.css" />
+</head>
+
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="images/logo/logo.png" alt="Graffims School Logo" class="logo-img" />
+                <div class="logo-text">
+                    <span class="logo-name">Graffims School</span>
+                    <span class="logo-tagline">...grooming the next generation for greatness</span>
+                </div>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <a href="admissions.html" class="nav-cta">Apply Now</a>
+
+            <!-- Hamburger for mobile -->
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </nav>
+    </header>
+
+
+    <!-- ========== HERO SECTION ========== -->
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="hero">
+
+        <!-- ---- SLIDESHOW BACKGROUND ---- -->
+        <!-- Add your own photos by replacing the src values below.
+         Recommended size: 1600×900px or wider. 5 slides shown by default.
+         You can add or remove slides freely — the JS handles any count. -->
+        <div class="hero-slideshow" id="heroSlideshow" aria-hidden="true">
+            <div class="hero-slide active" style="background-image: url('images/hero/slide-1.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/hero/slide-2.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/hero/slide-3.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/hero/slide-4.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/hero/slide-5.jpg');"></div>
+        </div>
+
+        <!-- Dark overlay so text stays readable over any photo -->
+        <div class="hero-overlay" aria-hidden="true"></div>
+
+        <!-- Decorative circles (sit above overlay, below content) -->
+        <div class="hero-bg-circle hero-circle-1"></div>
+        <div class="hero-bg-circle hero-circle-2"></div>
+
+        <!-- ---- HERO CONTENT ---- -->
+        <div class="hero-content">
+            <div class="hero-badge">Welcome to Graffims School</div>
+            <h1 class="hero-title">
+                Raising Excellent & <span class="highlight">Disciplined Students</span>,<br />
+                For the <span class="highlight">Future</span>
+            </h1>
+            <p class="hero-desc">
+                Affordable, value-driven education built on strong moral principles and academic excellence.
+            </p>
+            <div class="hero-buttons">
+                <a href="admissions.html" class="btn btn-primary">Explore Admissions</a>
+                <a href="about.html" class="btn btn-outline">Learn More</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <strong>300+</strong>
+                    <span>Students</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <strong>35+</strong>
+                    <span>Qualified Staff</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <strong>13+</strong>
+                    <span>Years of Experience</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ---- SLIDESHOW CONTROLS ---- -->
+        <div class="hero-controls" aria-label="Slideshow controls">
+
+            <!-- Prev / Next arrows -->
+            <button class="hero-arrow hero-prev" id="heroPrev" aria-label="Previous slide">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="15 18 9 12 15 6" />
+                </svg>
+            </button>
+            <button class="hero-arrow hero-next" id="heroNext" aria-label="Next slide">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6" />
+                </svg>
+            </button>
+
+            <!-- Dot indicators -->
+            <div class="hero-dots" id="heroDots" role="tablist" aria-label="Slide indicators"></div>
+
+            <!-- Play / Pause -->
+            <button class="hero-playpause" id="heroPlayPause" aria-label="Pause slideshow">
+                <!-- Pause icon (shown when playing) -->
+                <svg class="icon-pause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                    <rect x="6" y="4" width="4" height="16" rx="1" />
+                    <rect x="14" y="4" width="4" height="16" rx="1" />
+                </svg>
+                <!-- Play icon (shown when paused) -->
+                <svg class="icon-play" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"
+                    style="display:none;">
+                    <polygon points="5 3 19 12 5 21 5 3" />
+                </svg>
+            </button>
+
+        </div>
+
+        <!-- Progress bar at bottom of hero -->
+        <div class="hero-progress-bar" aria-hidden="true">
+            <div class="hero-progress-fill" id="heroProgressFill"></div>
+        </div>
+
+    </section>
+
+
+    <!-- ========== WHY CHOOSE US ========== -->
+    <section class="section section-light" id="why-us">
+        <div class="container">
+            <div class="section-header centered">
+                <p class="section-label">Why Choose Us</p>
+                <h2 class="section-title">A Legacy of <span class="text-green">Excellence</span></h2>
+                <p class="section-sub">
+                    Graffims provides a balanced education that combines strong academics with discipline, character, and personal development, helping every child grow with confidence and purpose.
+                </p>
+            </div>
+
+            <div class="cards-grid three-col">
+
+                <div class="feature-card">
+                    <div class="feature-icon green-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+                            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+                        </svg>
+                    </div>
+                    <h3>Strong Academic Foundation</h3>
+                    <p>We support every student to achieve their best through structured teaching, consistent guidance, and a focus on understanding.</p>
+                </div>
+
+                <div class="feature-card featured">
+                    <div class="feature-icon gold-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="8" r="6" />
+                            <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                        </svg>
+                    </div>
+                    <h3>Character & Discipline</h3>
+                    <p>At Graffims, students are raised with strong moral values, respect, and responsibility. Preparing them not just for exams, but for life.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon green-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Well-Rounded Development</h3>
+                    <p>From sports to creative activities and leadership opportunities, Garaffims helps students discover their talents and build confidence beyond the classroom</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== ABOUT STRIP ========== -->
+    <section class="section about-strip">
+        <div class="container about-split">
+            <div class="about-image-side">
+                <img src="images/hero/about-strip.jpg" alt="Students at Graffims School" class="about-img" />
+            </div>
+            <div class="about-text-side">
+                <p class="section-label">Our Story</p>
+                <h2 class="section-title">Building Leaders<br /><span class="text-green">Since 2012</span></h2>
+                <p class="about-desc">
+                    Graffims was founded with a vision to provide affordable quality education that transforms lives, 
+                    Graffims School has grown into a well respected educational institutions,
+                    changing lives having enrolling over 3,000 students since its inception.
+                </p>
+                <ul class="about-values">
+                    <li>
+                        <div class="value-dot"></div>
+                        <div>
+                            <strong>Mission</strong>
+                            <p>To equip every student with knowledge, values, and skills for life.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="value-dot"></div>
+                        <div>
+                            <strong>Vision</strong>
+                            <p>Producing globally competitive and morally upright graduates.</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="value-dot"></div>
+                        <div>
+                            <strong>Core Values</strong>
+                            <p>Integrity, Excellence, Innovation, Respect, and Community.</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="about.html" class="btn btn-green">Discover Our Story</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== NOTICE BOARD ========== -->
+    <section class="notice-board" id="notices">
+        <div class="container">
+            <div class="notice-header">
+                <div>
+                    <p class="section-label light-label">Latest Announcements</p>
+                    <h2 class="notice-title"><span class="text-gold">Notice</span> Board</h2>
+                </div>
+                <a href="#" class="view-all-link">View All Notices &rarr;</a>
+            </div>
+
+            <div class="notices-grid">
+
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <strong>15</strong>
+                        <span>Apr</span>
+                    </div>
+                    <div class="notice-body">
+                        <h4>End of Term Examinations Begin</h4>
+                        <p>All students must report with their exam ID cards. Full timetable is available at the school
+                            office and on the notice board.</p>
+                        <span class="notice-tag academic-tag">Academic</span>
+                    </div>
+                </div>
+
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <strong>18</strong>
+                        <span>Apr</span>
+                    </div>
+                    <div class="notice-body">
+                        <h4>Parent-Teacher Conference</h4>
+                        <p>Mid-term progress review meeting for all year groups. All parents and guardians are strongly
+                            encouraged to attend.</p>
+                        <span class="notice-tag general-tag">General</span>
+                    </div>
+                </div>
+
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <strong>25</strong>
+                        <span>Apr</span>
+                    </div>
+                    <div class="notice-body">
+                        <h4>Admissions Open – 2025/2026</h4>
+                        <p>Applications for the new academic intake are now open. Collect forms from the school office
+                            or apply through this website.</p>
+                        <span class="notice-tag admissions-tag">Admissions</span>
+                    </div>
+                </div>
+
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <strong>30</strong>
+                        <span>Apr</span>
+                    </div>
+                    <div class="notice-body">
+                        <h4>School Fees Payment Reminder</h4>
+                        <p>Second term school fees are due by April 30th. Please ensure payments are made at the
+                            bursar's office with your receipt.</p>
+                        <span class="notice-tag finance-tag">Finance</span>
+                    </div>
+                </div>
+
+                <div class="notice-item">
+                    <div class="notice-date">
+                        <strong>05</strong>
+                        <span>May</span>
+                    </div>
+                    <div class="notice-body">
+                        <h4>Staff Professional Development Day</h4>
+                        <p>School will be closed to students on this day as teachers attend a mandatory professional
+                            development workshop.</p>
+                        <span class="notice-tag general-tag">General</span>
+                    </div>
+                </div>
+
+                <div class="notice-item notice-cta">
+                    <div class="notice-cta-inner">
+                        <div class="cta-bell">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                                <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                            </svg>
+                        </div>
+                        <p>Never miss an announcement. Check back regularly for the latest school news.</p>
+                        <a href="#" class="btn btn-gold-outline">All Notices</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== UPCOMING EVENTS ========== -->
+    <section class="section section-light" id="events">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <p class="section-label">What's Coming Up</p>
+                    <h2 class="section-title">Upcoming <span class="text-green">Events</span></h2>
+                </div>
+                <a href="#" class="view-all-btn">See All Events &rarr;</a>
+            </div>
+
+            <div class="events-grid">
+
+                <div class="event-card">
+                    <div class="event-stripe green-stripe"></div>
+                    <div class="event-body">
+                        <div class="event-top">
+                            <span class="event-tag sports-tag">Sports</span>
+                            <span class="event-date-label">May 3, 2026</span>
+                        </div>
+                        <h4>Inter-House Athletics Competition</h4>
+                        <p>Annual inter-house competition featuring track, field, and team sports across all year
+                            groups. Come cheer your house!</p>
+                        <div class="event-meta">
+                            <span>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                May 3, 2026
+                            </span>
+                            <span>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                School Sports Field
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-stripe gold-stripe"></div>
+                    <div class="event-body">
+                        <div class="event-top">
+                            <span class="event-tag cultural-tag">Cultural</span>
+                            <span class="event-date-label">May 10, 2026</span>
+                        </div>
+                        <h4>Annual Cultural Day &amp; Exhibition</h4>
+                        <p>Students showcase cultural heritage through dance, food, and art in this vibrant whole-school
+                            celebration.</p>
+                        <div class="event-meta">
+                            <span>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                May 10, 2026
+                            </span>
+                            <span>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                School Assembly Hall
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-stripe green-stripe"></div>
+                    <div class="event-body">
+                        <div class="event-top">
+                            <span class="event-tag academic-tag-ev">Academic</span>
+                            <span class="event-date-label">May 17, 2026</span>
+                        </div>
+                        <h4>Science &amp; Technology Fair</h4>
+                        <p>Students present innovative projects to a panel of judges from leading universities and
+                            industry partners.</p>
+                        <div class="event-meta">
+                            <span>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                May 17, 2026
+                            </span>
+                            <span>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                Science Block
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card">
+                    <div class="event-stripe gold-stripe"></div>
+                    <div class="event-body">
+                        <div class="event-top">
+                            <span class="event-tag ceremony-tag">Ceremony</span>
+                            <span class="event-date-label">Jun 28, 2026</span>
+                        </div>
+                        <h4>Graduation &amp; Prize Giving Day</h4>
+                        <p>Celebration of the graduating class with awards, speeches, and a formal procession. All
+                            families welcome.</p>
+                        <div class="event-meta">
+                            <span>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                                    <line x1="16" y1="2" x2="16" y2="6" />
+                                    <line x1="8" y1="2" x2="8" y2="6" />
+                                    <line x1="3" y1="10" x2="21" y2="10" />
+                                </svg>
+                                June 28, 2026
+                            </span>
+                            <span>
+                                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                School Auditorium
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== QUICK LINKS / CTA STRIP ========== -->
+    <section class="cta-strip">
+        <div class="container cta-inner">
+            <div class="cta-text">
+                <h2>Ready to Join <span>Graffims School?</span></h2>
+                <p>Applications for the 2025/2026 academic year are now open. Secure your child's place today.</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="admissions.html" class="btn btn-gold">Apply Now</a>
+                <a href="contact.html" class="btn btn-white-outline">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+
+            <div class="footer-brand">
+                <img src="images/logo/logo.png" alt="Graffims School" class="footer-logo" />
+                <div class="footer-school-name">Graffims School</div>
+                <p>Dedicated to nurturing well-rounded individuals who are equipped to lead, serve, and excel in a
+                    changing world.</p>
+                <div class="footer-socials">
+                    <!-- Replace # with real social media links -->
+                    <a href="#" aria-label="Facebook" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Twitter" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram" class="social-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="2" width="20" height="20" rx="5" />
+                            <circle cx="12" cy="12" r="4" />
+                            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Academics</h4>
+                <ul>
+                    <li><a href="academics.html">Primary School</a></li>
+                    <li><a href="academics.html">Junior Secondary</a></li>
+                    <li><a href="academics.html">Senior Secondary</a></li>
+                    <li><a href="academics.html">Extracurriculars</a></li>
+                    <li><a href="academics.html">Clubs &amp; Societies</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        6B & 34, Onilekere Street, Ikeja, Lagos.
+                    </li>
+                    <li>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.18 2 2 0 0 1 3.6 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.09 6.09l.97-.97a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                        +234 800 000 0000
+                    </li>
+                    <li>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        graffimscollege@gmail.com
+                    </li>
+                    <li>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        Mon – Fri: 7:30am – 4:00pm
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-inner">
+                <p>&copy;2026 Graffims School. All rights reserved.</p>
+                <p>Designed &amp; developed with care.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script src="javascript/main.js"></script>
+</body>
+
+</html>
