@@ -74,9 +74,51 @@ ul {
     padding: 0 32px;
 }
 
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 28px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container {
+        padding: 0 16px;
+    }
+}
+
 /* ---------- SECTIONS ---------- */
 .section {
     padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .section {
+        padding: 48px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .section {
+        padding: 40px 0;
+    }
 }
 
 .section-light {
@@ -119,6 +161,20 @@ ul {
     justify-content: space-between;
     margin-bottom: 40px;
     gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 32px;
+    }
+}
+
+@media (max-width: 375px) {
+    .section-header {
+        margin-bottom: 24px;
+    }
 }
 
 .section-header.centered {
@@ -234,6 +290,28 @@ ul {
     grid-template-columns: repeat(2, 1fr);
 }
 
+@media (max-width: 768px) {
+    .cards-grid.three-col {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-grid.three-col,
+    .cards-grid.two-col {
+        grid-template-columns: 1fr;
+    }
+    .cards-grid {
+        gap: 18px;
+    }
+}
+
+@media (max-width: 375px) {
+    .cards-grid {
+        gap: 14px;
+    }
+}
+
 /* ---------- NAVIGATION ---------- */
 .site-header {
     position: sticky;
@@ -255,6 +333,26 @@ ul {
     gap: 20px;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 24px;
+        height: 65px;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 0 16px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 375px) {
+    .navbar {
+        padding: 0 12px;
+    }
+}
+
 .nav-logo {
     display: flex;
     align-items: center;
@@ -266,6 +364,20 @@ ul {
     width: 75px;
     height: 90px;
 
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        width: 60px;
+        height: 72px;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-img {
+        width: 50px;
+        height: 60px;
+    }
 }
 
 .logo-text {
@@ -286,6 +398,18 @@ ul {
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-weight: 300;
+}
+
+@media (max-width: 768px) {
+    .logo-tagline {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo-tagline {
+        display: none;
+    }
 }
 
 .nav-links {
@@ -362,6 +486,36 @@ ul {
     grid-template-columns: 2fr 1fr 1fr 1.3fr;
     gap: 48px;
     padding: 64px 32px 40px;
+}
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        padding: 48px 28px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 40px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        gap: 20px;
+        padding: 32px 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    .footer-grid {
+        gap: 16px;
+        padding: 24px 16px;
+    }
 }
 
 .footer-logo {
@@ -538,5 +692,67 @@ ul {
         flex-direction: column;
         gap: 6px;
         text-align: center;
+    }
+}
+
+/* Extra Small Mobile (375px and below) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .section {
+        padding: 32px 0;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .section-label {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .logo-name {
+        font-size: 15px;
+    }
+
+    .logo-tagline {
+        font-size: 9px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .nav-cta {
+        font-size: 12px;
+        padding: 8px 16px;
+    }
+
+    .btn {
+        font-size: 13px;
+        padding: 11px 20px;
+    }
+
+    .footer-bottom-inner {
+        font-size: 11px;
+    }
+
+    .footer-col h4 {
+        font-size: 10px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .footer-col ul a {
+        font-size: 12px;
+    }
+
+    .footer-contact-list li {
+        font-size: 12px;
+        margin-bottom: 10px;
     }
 }

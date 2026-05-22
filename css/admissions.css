@@ -6,6 +6,24 @@
     border-bottom: 3px solid var(--gold);
 }
 
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 52px 0 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .page-hero {
+        padding: 40px 0 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .page-hero {
+        padding: 32px 0 0;
+    }
+}
+
 .page-hero-bg {
     position: absolute;
     inset: 0;
