@@ -99,6 +99,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var slideshow    = document.getElementById('heroSlideshow');
     if (!slideshow) return;
 
+    var heroEl       = document.getElementById('hero');
     var slides       = slideshow.querySelectorAll('.hero-slide');
     var dotsWrap     = document.getElementById('heroDots');
     var prevBtn      = document.getElementById('heroPrev');
