@@ -361,8 +361,8 @@ ul {
 }
 
 .logo-img {
-    width: 75px;
-    height: 90px;
+    width: auto;
+    height: 50px;
 
 }
 
@@ -519,8 +519,8 @@ ul {
 }
 
 .footer-logo {
-    width: 45px;
-    height: 60px;
+    width: auto;
+    height: 50px;
     border-radius: 50%;
 
 }
