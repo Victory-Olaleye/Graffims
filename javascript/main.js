@@ -264,7 +264,12 @@ document.addEventListener('DOMContentLoaded', function () {
   const allNavLinks = document.querySelectorAll('.nav-links a');
   allNavLinks.forEach(function (link) {
     const href = link.getAttribute('href');
-    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+    // Extract just the filename from href (in case it has a path)
+    const hrefFile = href.split('/').pop() || 'index.html';
+    
+    if (hrefFile === currentPage || 
+        (currentPage === '' && hrefFile === 'index.html') ||
+        (href === currentPage)) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
